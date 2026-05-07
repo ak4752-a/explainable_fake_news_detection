@@ -1,14 +1,120 @@
-Final Analysis
+FINAL ANALYSIS
 
-The project implemented a fake news detection framework using NLP, machine learning, stylometric analysis, and explainable AI techniques.
+Project:
+Explainable Fake News Detection using NLP and XAI
 
-Key observations:
+======================================================================
+1. MODEL PERFORMANCE COMPARISON
+======================================================================
 
-- Linear SVM achieved the highest internal classification performance.
-- TF-IDF outperformed Bag of Words in most experiments.
-- Stylometric features improved interpretability and behavioral analysis.
-- SHAP explainability successfully identified influential semantic and stylistic features.
-- Leakage-aware preprocessing prevented artificial performance inflation.
-- External validation revealed significant domain-shift and generalization limitations.
++-------------------------------+--------------------------+-----------+------------------+
+| Model                         | Feature Type             | Accuracy  | Overall Behavior |
++-------------------------------+--------------------------+-----------+------------------+
+| Naive Bayes                   | TF-IDF                   | 93.5%     | Fast but weaker  |
+| Logistic Regression           | TF-IDF                   | 97.8%     | Stable           |
+| Linear SVM                    | TF-IDF                   | 98.7%     | Best performer   |
+| Hybrid Logistic Regression    | TF-IDF + Stylometry      | 97.9%     | More interpretable |
+| Hybrid Linear SVM             | TF-IDF + Stylometry      | 98.2%     | Balanced model   |
+| Linear SVM                    | Bag of Words             | 97.3%     | Competitive      |
+| External Validation           | Contemporary Dataset     | 50.0%     | Poor generalization |
++-------------------------------+--------------------------+-----------+------------------+
 
-The project demonstrated that high internal accuracy does not necessarily guarantee strong real-world robustness across unseen datasets.
+======================================================================
+2. FEATURE ENGINEERING ANALYSIS
+======================================================================
+
++-----------------------+---------------------------------------------+
+| Feature               | Purpose                                     |
++-----------------------+---------------------------------------------+
+| TF-IDF                | Captures important word relevance           |
+| Bag of Words          | Basic word-frequency representation         |
+| Lexical Diversity     | Measures vocabulary richness                |
+| Subjectivity Score    | Detects emotional/opinionated writing       |
+| Exclamation Density   | Detects sensational writing patterns        |
+| Uppercase Ratio       | Measures aggressive/emphasized text style   |
+| Article Length        | Captures structural writing behavior        |
++-----------------------+---------------------------------------------+
+
+Observation:
+Stylometric features improved interpretability and helped
+analyze behavioral differences between fake and real news.
+
+======================================================================
+3. EXPLAINABILITY ANALYSIS
+======================================================================
+
++----------------------+---------------------------------------------+
+| Explainability Tool  | Insight Obtained                            |
++----------------------+---------------------------------------------+
+| SHAP Beeswarm Plot   | Global feature importance analysis          |
+| SHAP Waterfall Plot  | Article-level prediction reasoning          |
+| Sankey Diagram       | Prediction flow and classification bias     |
+| PCA Visualization    | Feature-space separation analysis           |
+| Domain Shift Plot    | Dataset distribution comparison             |
++----------------------+---------------------------------------------+
+
+Observation:
+The SHAP analysis showed that both semantic keywords and
+stylometric indicators influenced prediction outcomes.
+
+======================================================================
+4. EXTERNAL VALIDATION ANALYSIS
+======================================================================
+
++--------------------------+---------------------------------------------+
+| Observation              | Analysis                                    |
++--------------------------+---------------------------------------------+
+| Accuracy Drop            | Strong performance degradation observed     |
+| Prediction Collapse      | Model favored one prediction class          |
+| Vocabulary Mismatch      | External data used different writing style  |
+| Dataset Shift            | Structural differences affected learning    |
+| Temporal Variation       | Contemporary articles differed from ISOT    |
++--------------------------+---------------------------------------------+
+
+Observation:
+The model generalized poorly on unseen contemporary data,
+highlighting the difficulty of cross-domain fake news
+detection.
+
+======================================================================
+5. KEY LEARNINGS
+======================================================================
+
+- High internal accuracy does not guarantee strong
+  real-world robustness.
+
+- Leakage-aware preprocessing is important for preventing
+  artificially inflated results.
+
+- Explainable AI improves transparency and trustworthiness
+  of machine learning predictions.
+
+- Fake news detection systems are highly sensitive to
+  dataset distribution and writing-style differences.
+
+- Classical NLP models remain highly effective when
+  combined with proper preprocessing and feature
+  engineering.
+
+======================================================================
+6. FINAL CONCLUSION
+======================================================================
+
+The project successfully developed an explainable fake
+news detection framework using NLP, stylometric analysis,
+machine learning, and SHAP-based explainability.
+
+Among all evaluated models, Linear SVM with TF-IDF
+achieved the best internal performance. The inclusion of
+stylometric features improved interpretability and
+behavioral analysis, while SHAP visualizations provided
+transparent reasoning behind prediction outcomes.
+
+External validation revealed significant domain-shift and
+generalization challenges, demonstrating that fake news
+detection remains a difficult real-world problem despite
+high benchmark accuracy.
+
+Overall, the project evolved beyond a simple classification
+task into a robustness-aware and explainable NLP system
+for misinformation analysis.
