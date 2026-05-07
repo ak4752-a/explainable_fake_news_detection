@@ -1,0 +1,13 @@
+External Validation Summary
+
+The trained model was evaluated on a contemporary external fake news dataset to assess cross-domain robustness.
+
+Observation:
+- The model showed substantial performance degradation during external validation.
+- Prediction bias toward a single class was observed.
+- Results indicated the presence of dataset shift and vocabulary mismatch.
+
+This experiment highlighted the importance of:
+- robust preprocessing,
+- explainable AI,
+- and realistic evaluation strategies in fake news detection systems.
