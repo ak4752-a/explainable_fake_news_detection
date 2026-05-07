@@ -1,0 +1,8 @@
+Model,Feature Type,Accuracy
+Naive Bayes,TF-IDF,0.935
+Logistic Regression,TF-IDF,0.978
+Linear SVM,TF-IDF,0.987
+Hybrid Logistic Regression,TF-IDF + Stylometric,0.979
+Hybrid Linear SVM,TF-IDF + Stylometric,0.982
+Linear SVM,Bag of Words,0.973
+External Validation,Contemporary Dataset,0.500
