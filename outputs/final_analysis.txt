@@ -1,0 +1,14 @@
+Final Analysis
+
+The project implemented a fake news detection framework using NLP, machine learning, stylometric analysis, and explainable AI techniques.
+
+Key observations:
+
+- Linear SVM achieved the highest internal classification performance.
+- TF-IDF outperformed Bag of Words in most experiments.
+- Stylometric features improved interpretability and behavioral analysis.
+- SHAP explainability successfully identified influential semantic and stylistic features.
+- Leakage-aware preprocessing prevented artificial performance inflation.
+- External validation revealed significant domain-shift and generalization limitations.
+
+The project demonstrated that high internal accuracy does not necessarily guarantee strong real-world robustness across unseen datasets.
