@@ -67,12 +67,29 @@ https://www.kaggle.com/datasets/mahdimashayekhi/fake-news-detection-dataset
 
 ## Repository Structure
 
-```text
-notebooks/   -> Jupyter notebook implementation
-data/        -> dataset links
-outputs/     -> generated outputs/results
-```
+## Repository Structure
 
+```text
+explainable-fake-news-detection/
+│
+├── data/
+│   ├── README.md
+│   └── dataset_links.txt
+│
+├── notebooks/
+│   ├── README.md
+│   └── fake_news_detection.ipynb
+│
+├── outputs/
+│   ├── README.md
+│   ├── external_validation_summary.txt
+│   ├── final_analysis.txt
+│   └── model_comparison_results.csv
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
 ---
 
 ## Installation
