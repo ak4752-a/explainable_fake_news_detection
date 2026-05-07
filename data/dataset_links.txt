@@ -1,0 +1,5 @@
+ISOT Fake News Dataset
+https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
+
+External Validation Dataset
+https://www.kaggle.com/datasets/mahdimashayekhi/fake-news-detection-dataset
